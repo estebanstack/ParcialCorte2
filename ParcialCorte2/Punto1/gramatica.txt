@@ -1,0 +1,44 @@
+Programa   → SentenciaLista
+SentenciaLista → Sentencia SentenciaLista | ε
+Sentencia  → CreateTable ';'
+           | Insert ';'
+           | Select ';'
+           | Update ';'
+           | Delete ';'
+
+CreateTable → 'CREATE' 'TABLE' id '(' DefCampoLista OptPK ')'
+DefCampoLista → DefCampo RestCampos
+RestCampos    → ',' DefCampo RestCampos | ε
+DefCampo      → id Tipo
+Tipo          → 'INT' | 'FLOAT' | 'TEXT'
+OptPK         → ',' 'PRIMARY' 'KEY' '(' id ')' | ε
+
+Insert    → 'INSERT' 'INTO' id OptCols 'VALUES' '(' ValorLista ')'
+OptCols   → '(' IdLista ')' | ε
+IdLista   → id RestoIds
+RestoIds  → ',' id RestoIds | ε
+ValorLista→ Valor RestoVals
+RestoVals → ',' Valor RestoVals | ε
+Valor     → num | str | 'TRUE' | 'FALSE'
+
+Select      → 'SELECT' Seleccion 'FROM' id OptWhere
+Seleccion   → '*' | IdLista
+OptWhere    → 'WHERE' Bool | ε
+
+Update      → 'UPDATE' id 'SET' AsignLista OptWhere
+AsignLista  → Asign RestoAsign
+RestoAsign  → ',' Asign RestoAsign | ε
+Asign       → id '=' Expr
+
+Delete      → 'DELETE' 'FROM' id OptWhere
+
+Expr  → Expr '+' Term | Expr '-' Term | Term
+Term  → Term '*' Fact | Term '/' Fact | Fact
+Fact  → '(' Expr ')' | id | num
+
+Rel   → Expr OpRel Expr
+OpRel → '=' | '<>' | '<' | '<=' | '>' | '>='
+
+Bool  → Bool 'OR' BoolT | BoolT
+BoolT → BoolT 'AND' BoolF | BoolF
+BoolF → 'NOT' BoolF | '(' Bool ')' | Rel | id | 'TRUE' | 'FALSE'

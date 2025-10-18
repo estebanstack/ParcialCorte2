@@ -1,0 +1,8 @@
+CREATE TABLE estudiantes (id INT, nombre TEXT, edad INT, PRIMARY KEY (id));
+INSERT INTO estudiantes VALUES (1, "Julian", 20);
+INSERT INTO estudiantes VALUES (2, "Camila", 21);
+SELECT * FROM estudiantes;
+UPDATE estudiantes SET edad = edad + 1 WHERE nombre = "Julian";
+SELECT * FROM estudiantes;
+DELETE FROM estudiantes WHERE id = 2;
+SELECT * FROM estudiantes;
