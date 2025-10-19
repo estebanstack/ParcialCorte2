@@ -63,7 +63,7 @@ public class Parser {
     }
 
     // Gramatica:
-    // S → T { mas T }
+    // S → T mas T 
     private void S() {
         T();
         while (token == Token.mas) {
@@ -72,7 +72,7 @@ public class Parser {
         }
     }
 
-    // T → F { por F }
+    // T → F por F 
     private void T() {
         F();
         while (token == Token.por) {
