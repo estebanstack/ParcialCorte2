@@ -1,0 +1,6 @@
+proc EMPAREJAR(tokEsperado):
+    si token == tokEsperado entonces
+        token ← lexico.getNextToken()
+    en otro caso
+        errorSintaxis(esperado = tokEsperado, encontrado = token, pos = lexico.pos())
+fin
