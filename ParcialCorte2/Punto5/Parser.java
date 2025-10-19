@@ -114,7 +114,8 @@ public class Parser {
     }
 
     public static void main(String[] args) {
-        
+
+		// ENTRADA DEL PROGRAMA (MODIFICAR SEGUN LO QUE DESEA EMPAREJAR)
         Token[] entrada = {
             Token.num, Token.mas, Token.eof
         };
