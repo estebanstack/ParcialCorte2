@@ -1,7 +1,7 @@
 # 1) Transformación a LL(1)
 
 
-# Gramática original
+  # Gramática original
 
   E → E + T | T
   
