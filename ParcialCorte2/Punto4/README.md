@@ -88,7 +88,7 @@ Esta gramática genera exactamente las cadenas con paréntesis balanceados, por 
 
 ---
 
-## ⚙️ Ejecución del Programa
+## Ejecución del Programa
 
 1. Asegúrate de tener ambos archivos en la misma carpeta:
    ```
@@ -111,13 +111,13 @@ Esta gramática genera exactamente las cadenas con paréntesis balanceados, por 
   40 |        20 |    36.00 |      0.085 |      7.421 |      100.0
   60 |        20 |    54.00 |      0.132 |     21.844 |      100.0
 
-✅ Ambos analizadores coinciden en los resultados.
+Ambos analizadores coinciden en los resultados.
    CYK es mucho más lento (O(n³)) que el predictivo (O(n)).
 ```
 
 ---
 
-## 📊 Análisis de Resultados
+## Análisis de Resultados
 
 - **Exactitud:**  
   Ambos analizadores coinciden al 100% en sus decisiones (aceptar o rechazar una cadena).
@@ -130,22 +130,3 @@ Esta gramática genera exactamente las cadenas con paréntesis balanceados, por 
 - **Conclusión:**  
   El parser predictivo es mucho más eficiente pero solo funciona con gramáticas LL(1).  
   CYK es más general y puede manejar cualquier gramática en FNC, aunque a costa de un mayor costo computacional.
-
----
-
-## 💡 Cómo Sustentar
-
-1. **Explica el lenguaje:** paréntesis bien balanceados.  
-2. **Muestra la gramática original y su forma en FNC.**  
-3. **Comenta las diferencias:**  
-   - Predictivo → recursivo y eficiente.  
-   - CYK → dinámico y más general.  
-4. **Interpreta la tabla de resultados.**  
-5. **Conclusión:** Ambos detectan las mismas cadenas, pero el parser predictivo es más rápido.
-
----
-
-## 📚 Referencias
-- Hopcroft, J. E., Motwani, R., & Ullman, J. D. *Introduction to Automata Theory, Languages, and Computation*.
-- Aho, A. V., Lam, M. S., Sethi, R., & Ullman, J. D. *Compilers: Principles, Techniques, and Tools* (Dragon Book).
-- Notas de clase: **Lenguajes de Programación – Universidad Sergio Arboleda**
