@@ -132,3 +132,10 @@ En cada paso:
 5. El proceso termina con **ACEPTA** cuando ambos símbolos (`$`) se encuentran al tope y en la entrada.
 
 ---
+
+## Ejecución del Programa
+
+### Desde la terminal:
+
+```bash
+python3 analizador.py cadenas.txt
