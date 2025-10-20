@@ -26,7 +26,7 @@
 # 2) Conjuntos Primeros, Siguientes y Prediccion.
 
 
-Primeros
+- Primeros
 
   F = { '(', id }
   
@@ -39,7 +39,7 @@ Primeros
   E' = { '+', ε }
   
 
-Siguientes
+- Siguientes
 
   E = { ')', $ }
   
@@ -52,7 +52,7 @@ Siguientes
   F = { '*', '+', ')', $ }
   
 
-Prediccion
+- Prediccion
 
   E → T E' : { '(', id }
   
