@@ -1,12 +1,4 @@
-# 📘 Análisis Sintáctico: Parser Predictivo vs. CYK  
-**Universidad Sergio Arboleda – Lenguajes de Programación**  
-**Autor:** Julián David Briñez Sánchez  
-**Archivo principal:** `algoritmoCYK.py`  
-**Gramática:** `gramatica.txt`
-
----
-
-## 🧩 Descripción General
+## Descripción General
 
 El proyecto implementa y compara dos métodos de **análisis sintáctico** para el mismo lenguaje formal de **paréntesis bien balanceados**:
 
@@ -20,7 +12,7 @@ Ambos parsers determinan si una cadena pertenece al lenguaje definido por la gra
 
 ---
 
-## 📄 Estructura de Archivos
+## Estructura de Archivos
 
 ### 1. `algoritmoCYK.py`
 Contiene toda la lógica del programa, dividida en cuatro secciones principales:
