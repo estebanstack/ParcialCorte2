@@ -1,5 +1,6 @@
 # 1) Transformación a LL(1)
 
+
 Gramática original
 
   E → E + T | T
@@ -7,6 +8,7 @@ Gramática original
   T → T * F | F
   
   F → ( E ) | id
+  
 
 Versión LL(1):
 
@@ -23,7 +25,9 @@ Versión LL(1):
 
 No hay más factores comunes, así que es LL(1).
 
+
 # 2) Conjuntos Primeros, Siguientes y Prediccion.
+
 
 Primeros
 
