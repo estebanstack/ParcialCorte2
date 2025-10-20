@@ -2,6 +2,7 @@
 
 
 - Gramática original
+  
   E → E + T | T
 
   T → T * F | F
@@ -10,6 +11,7 @@
   
 
 - Versión LL(1):
+
   E → T E'
 
   E' → + T E' | ε
